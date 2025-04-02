@@ -34,22 +34,22 @@ class MainActivity : AppCompatActivity() {
 
             when (input) {
                 "Morning" -> {
-                    meals = "Eat Oatmeal"
+                    meals = "Morning: Eat Oatmeal"
                 }
-                "Mid-morning:Light snack" -> {
-                    meals = "Banana berry smoothie"
+                "Mid-morning" -> {
+                    meals = "Mid-morning:Light snack = Banana berry smoothie"
                 }
-                "Afternoon:Lunch" -> {
-                    meals = "Toasted Chicken Mayo"
+                "Afternoon" -> {
+                    meals = "Afternoon:Lunch = Toasted Chicken Mayo"
                 }
-                "Afternoon Snack:Quick bites" -> {
-                    meals = "Nuggets"
+                "Afternoon Snack" -> {
+                    meals = "Afternoon Snack:Quick bites = Nuggets"
                 }
-                "Dinner:" -> {
-                    meals = "Spaghetti"
+                "Dinner" -> {
+                    meals = "Dinner: Main course = Spaghetti bolognese"
                 }
-                "After Dinner Snack:Desserts" -> {
-                    meals = "Banana Bread"
+                "After Dinner Snack" -> {
+                    meals = "After Dinner Snack: desserts = Banana Bread"
                 }
 
                 else -> {
