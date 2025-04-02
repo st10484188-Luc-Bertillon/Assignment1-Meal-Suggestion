@@ -57,5 +57,9 @@ class MainActivity : AppCompatActivity() {
             }
            txtView.text = meals
         }
+        btnReset.setOnClickListener{
+            txtView.text = ""
+            edtTime.text.clear()
+            Toast.makeText(this, "Cleared", Toast.LENGTH_SHORT).show()
     }
 }
