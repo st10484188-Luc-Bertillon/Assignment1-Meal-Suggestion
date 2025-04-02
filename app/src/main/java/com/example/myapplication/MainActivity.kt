@@ -28,33 +28,28 @@ class MainActivity : AppCompatActivity() {
 
 
         btnGenerate.setOnClickListener {
-            val Input = edtTime.text.toString().trim().lowercase()
+            val input = edtTime.text.toString().trim().lowercase()
 
             val meals: String
 
-            when (Input) {
-                "morning" -> {
-                    meals = "Breakfast: Eggs"
+            when (input) {
+                "Morning" -> {
+                    meals = "Eat Oatmeal"
                 }
-
-                "mid-morning" -> {
-                    meals = "Snack: Fruit"
+                "Mid-morning:Light snack" -> {
+                    meals = "Banana berry smoothie"
                 }
-
-                "afternoon" -> {
-                    meals = "Lunch: Sandwich"
+                "Afternoon:Lunch" -> {
+                    meals = "Toasted Chicken Mayo"
                 }
-
-                "mid-afternoon" -> {
-                    meals = "Snack: Cake"
+                "Afternoon Snack:Quick bites" -> {
+                    meals = "Nuggets"
                 }
-
-                "dinner" -> {
-                    meals = "Main Course: Pasta"
+                "Dinner:" -> {
+                    meals = "Spaghetti"
                 }
-
-                "after dinner" -> {
-                    meals = "Dessert: Ice cream"
+                "After Dinner Snack:Desserts" -> {
+                    meals = "Banana Bread"
                 }
 
                 else -> {
