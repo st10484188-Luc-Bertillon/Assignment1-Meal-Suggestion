@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -23,5 +24,38 @@ class MainActivity : AppCompatActivity() {
         val txtView = findViewById<TextView>(R.id.TxtView)
         val edtTime = findViewById<EditText>(R.id.EdtTime)
         val btnGenerate = findViewById<Button>(R.id.btnGenerate)
+
+
+        btnGenerate.setOnClickListener {
+            val Input = edtTime.text.toString().trim().lowercase()
+
+            val meals: String
+
+            when (Input) {
+                "morning" -> {
+                    meals = "Breakfast: Eggs"
+                }
+                "mid-morning" -> {
+                    meals = "Snack: Fruit"
+                }
+                "afternoon" -> {
+                    meals = "Lunch: Sandwich"
+                }
+                "mid-afternoon" -> {
+                    meals = "Snack: Cake"
+                }
+                "dinner" -> {
+                    meals = "Main Course: Pasta"
+                }
+                "after dinner" -> {
+                    meals = "Dessert: Ice cream"
+                }
+                else -> {
+                    meals = "Please enter Text!"
+                    Toast.makeText(this, "Please enter text", Toast.LENGTH_SHORT).show()
+                }
+            }
+           txtView.text = meals
+        }
     }
 }
